@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
+import {getRandomNumberFromRange} from '../components/Tools'
 
 const Guess = () => {
-    const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
-    const [guess, setGuess] = useState(getRandomNumber(1,100))
+    const [guess, setGuess] = useState(getRandomNumberFromRange(1,100))
     const [gameFinish, setGameFinish] = useState(false)
     const [tryCount, setTryCount] = useState(0)
     const messages = {
@@ -39,7 +39,7 @@ const Guess = () => {
         setPrompt2(messages.blank)
         setGameFinish(false)
         setTryCount(0)
-        setGuess(getRandomNumber(1,100))
+        setGuess(getRandomNumberFromRange(1,100))
     }
 
 
