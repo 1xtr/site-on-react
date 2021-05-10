@@ -19,10 +19,13 @@ const PasswordGenerator = () => {
         }).join('')
         for (let i = 0; i < passLen; i++) {
             const randomSymbol = shuffled[getRandomNumber(shuffled.length)]
+            if (randomSymbol === undefined) {
+                return
+            }
             newPassword += randomSymbol
         }
         setPassword(newPassword)
-        // console.log('password', password)
+        console.log('password', password.length)
     }
     return (
         <form className="form-control text-start mt-4 mx-auto" style={{width: 360}}>
@@ -88,7 +91,6 @@ const PasswordGenerator = () => {
                     </label>
                 </p>
             </fieldset>
-
             <p>
                 <input
                     className="btn btn-secondary"

@@ -1,13 +1,14 @@
 import React from 'react'
+import whoami from '../assets/whoami.jpg'
 
 const Home = () => {
     return (
         <div className="container mb-4">
-            <h1 className="text-center">Личный сайт студента GeekBrains</h1>
-
-            <div>
-                <img src="../assets/whoami.jpg" alt="Iam"/>
-                <div>
+            <div className="row">
+                <div className="col">
+                    <img src={whoami} alt="Iam" className="img-fluid float-end" />
+                </div>
+                <div className="col">
                     <p>
                         <b>Добрый день</b>. Меня зовут <i>Алексей</i>. Я совсем недавно начал
                         программировать, однако уже кое-чему научился.

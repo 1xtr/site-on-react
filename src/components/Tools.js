@@ -10,7 +10,7 @@ export function copyToClipboard(obj) {
 }
 export function getRandomNumber(max = 99) {
     let result = Math.round(Math.random() * max)
-    if (isNaN(result)) {
+    if (result === undefined) {
         this.getRandomNumber(max)
     }
     return result
