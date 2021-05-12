@@ -25,7 +25,7 @@ const PasswordGenerator = () => {
             newPassword += randomSymbol
         }
         setPassword(newPassword)
-        console.log('password', password.length)
+        // console.log('password', password)
     }
     return (
         <form className="form-control text-start mt-4 mx-auto" style={{width: 360}}>
