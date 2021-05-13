@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import PasswordGenerator from './pages/PasswordGenerator'
@@ -16,8 +16,8 @@ function App() {
                     <Route path="/guess" component={Guess}/>
                     <Route path="/password-generator" component={PasswordGenerator}/>
                     <Route path="/soap-dishes" component={SoapDishes}/>
-                    <Route path="/" component={Home}/>
-
+                    <Route path="/" exact component={Home}/>
+                    <Redirect to={'/'}/>
                 </Switch>
 
             </div>
