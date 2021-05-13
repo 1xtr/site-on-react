@@ -97,7 +97,10 @@ const SoapDishes = () => {
 
     return (
         <div className="container-sm mx-auto form-control pb-4" style={{width: 700}}>
-            <h1 className="text-center">Soap dishes</h1>
+            <div className="text-center">
+                <h1>Soap dishes</h1>
+                <p>Кликаем на квадрат, откроется игровая кость, следом откроется выбор компьютера</p>
+            </div>
             <div className="row">
                 <div className="col text-center">
                     <button className="btn btn-primary m-2" onClick={newGameHandler}>New game</button>
