@@ -91,6 +91,7 @@ const SoapDishes = () => {
         }
         setUserScore(0)
         setCompScore(0)
+        // eslint-disable-next-line
     }, [compScore])
 
 
@@ -113,6 +114,12 @@ const SoapDishes = () => {
                     renderDices()
                 }
 
+            </div>
+            <div className='font-monospace fs-6 mt-4 text-center'>
+                <a className={'text-decoration-none'}
+                    href='https://github.com/1xtr/site-on-react'
+                   target={'_blank'}
+                   rel={'noreferrer'}>Sources on Github</a>
             </div>
         </div>
     )
